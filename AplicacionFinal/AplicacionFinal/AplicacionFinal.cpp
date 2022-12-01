@@ -5,14 +5,16 @@
 
 #include <stdio.h>
 
-void contadorTerminos( char *polinomio) {
-	int i=0, j=0;
+int contadorTerminos( char *polinomio) {
+	int i=0, contaTerminos=0;
 	while (polinomio[i] =! '\0')
 	{
+		if (polinomio[i] == '+' || polinomio[i] == '-') {
+			contaTerminos++;
+		}
 		i++;
 	}
-
-
+	return contaTerminos;
 }
 
 void gradoPolinomio(char *polinomio){
@@ -34,6 +36,7 @@ void gradoPolinomio(char *polinomio){
 int main(void) {
 
 	char polinomio[100];
+	int terminosTotales;
 
 
 	printf("Introduce el polinomio:");
@@ -41,7 +44,7 @@ int main(void) {
 	printf("El polinomio escrito fue: %s", polinomio);
 
 	//cuenta los términos
-	contadorTerminos(polinomio);
+	terminosTotales= contadorTerminos(polinomio);
 	//Checar el grado del polinomio más grande
 	gradoPolinomio(polinomio);
 
