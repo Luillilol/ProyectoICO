@@ -21,13 +21,12 @@ void gradoPolinomio(char *polinomio){
 	int i = 0, j=0;
 	char grado[10];
 
-	for (i = 0; i < 100; i++) {
+	while (polinomio[i] != '\0') {
 		if (polinomio[i] == '^' && polinomio[i] != '\0')
 		{
 			grado[j] = polinomio[i + 1];
 			j++;
 		}
-
 	}
 	printf("Grados: %s", grado);
 }
