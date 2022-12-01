@@ -4,7 +4,14 @@
 
 
 #include <stdio.h>
+
 void contadorTerminos( char *polinomio) {
+	int i=0, j=0;
+	while (polinomio[i] =! '\0')
+	{
+		i++;
+	}
+
 
 }
 
